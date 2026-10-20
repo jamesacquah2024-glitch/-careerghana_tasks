@@ -1,0 +1,7 @@
+category,monthly_budget,actual_spend,pct_used,over_by,status
+Marketing,4500,5320.0,118.2,820.0,OVER BUDGET
+Software,2500,2290.01,91.6,-209.99,WARNING
+Travel,3000,3410.01,113.7,410.01,OVER BUDGET
+Office Supplies,1200,760.0,63.3,-440.0,OK
+Training,1800,1100.0,61.1,-700.0,OK
+Utilities,1500,1240.0,82.7,-260.0,OK

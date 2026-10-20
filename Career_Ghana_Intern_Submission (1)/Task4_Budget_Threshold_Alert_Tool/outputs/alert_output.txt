@@ -1,0 +1,7 @@
+BUDGET ALERT: categories need attention
+
+[OVER BUDGET] Marketing: $5,320.00 spent of $4,500.00 (118.2%), over by $820.00
+[OVER BUDGET] Travel: $3,410.01 spent of $3,000.00 (113.7%), over by $410.01
+[WARNING] Software: $2,290.01 of $2,500.00 (91.6% used)
+
+Please review these departments' spending before month end.

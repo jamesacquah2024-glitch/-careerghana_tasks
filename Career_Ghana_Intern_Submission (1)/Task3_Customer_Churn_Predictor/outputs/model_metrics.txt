@@ -1,0 +1,4 @@
+rule_auc=0.974
+logreg_auc=1.000
+customers=300
+flagged=93

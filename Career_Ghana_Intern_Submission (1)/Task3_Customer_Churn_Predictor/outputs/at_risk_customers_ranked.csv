@@ -1,0 +1,94 @@
+rank,customer_id,risk_score,risk_level,days_since_last_order,orders_last_30d,freq_drop_pct,avg_order_value,why_flagged
+1,C0232,100.0,High,42,1,71.4,77.59,42 days inactive; order frequency down 71%; 4 support tickets
+2,C0137,100.0,High,118,0,100.0,76.78,118 days inactive; order frequency down 100%; 3 support tickets
+3,C0117,100.0,High,46,0,100.0,74.03,46 days inactive; order frequency down 100%; 4 support tickets
+4,C0135,100.0,High,86,0,100.0,62.17,86 days inactive; order frequency down 100%; 3 support tickets
+5,C0217,100.0,High,79,0,100.0,58.66,79 days inactive; order frequency down 100%; 3 support tickets
+6,C0237,100.0,High,37,0,100.0,58.34,37 days inactive; order frequency down 100%; 3 support tickets
+7,C0156,100.0,High,46,0,100.0,53.84,46 days inactive; order frequency down 100%; 3 support tickets
+8,C0144,100.0,High,54,0,100.0,41.45,54 days inactive; order frequency down 100%; 3 support tickets
+9,C0280,100.0,High,41,0,100.0,40.72,41 days inactive; order frequency down 100%; 3 support tickets
+10,C0181,100.0,High,59,0,100.0,39.7,59 days inactive; order frequency down 100%; 3 support tickets
+11,C0082,100.0,High,81,0,100.0,38.72,81 days inactive; order frequency down 100%; 3 support tickets
+12,C0209,100.0,High,59,0,100.0,36.43,59 days inactive; order frequency down 100%; 3 support tickets
+13,C0017,95.0,High,119,0,100.0,107.71,119 days inactive; order frequency down 100%
+14,C0208,95.0,High,106,0,100.0,88.06,106 days inactive; order frequency down 100%
+15,C0112,95.0,High,118,0,100.0,85.71,118 days inactive; order frequency down 100%
+16,C0221,95.0,High,107,0,100.0,72.54,107 days inactive; order frequency down 100%
+17,C0078,95.0,High,112,0,100.0,52.3,112 days inactive; order frequency down 100%
+18,C0267,95.0,High,102,0,100.0,51.89,102 days inactive; order frequency down 100%
+19,C0290,95.0,High,113,0,100.0,46.61,113 days inactive; order frequency down 100%
+20,C0140,95.0,High,119,0,100.0,43.99,119 days inactive; order frequency down 100%
+21,C0234,95.0,High,117,0,100.0,43.6,117 days inactive; order frequency down 100%
+22,C0105,95.0,High,116,0,100.0,40.51,116 days inactive; order frequency down 100%
+23,C0185,95.0,High,117,0,100.0,36.45,117 days inactive; order frequency down 100%
+24,C0274,95.0,High,98,0,100.0,36.2,98 days inactive; order frequency down 100%
+25,C0077,95.0,High,102,0,100.0,29.95,102 days inactive; order frequency down 100%
+26,C0069,95.0,High,95,0,100.0,24.2,95 days inactive; order frequency down 100%
+27,C0162,95.0,High,119,0,100.0,19.56,119 days inactive; order frequency down 100%
+28,C0233,94.7,High,88,0,100.0,88.18,88 days inactive; order frequency down 100%
+29,C0002,94.2,High,85,0,100.0,62.74,85 days inactive; order frequency down 100%
+30,C0183,93.0,High,78,0,100.0,42.07,78 days inactive; order frequency down 100%
+31,C0240,92.8,High,77,0,100.0,77.03,77 days inactive; order frequency down 100%
+32,C0092,92.8,High,77,0,100.0,48.71,77 days inactive; order frequency down 100%
+33,C0297,92.2,High,73,0,100.0,93.62,73 days inactive; order frequency down 100%
+34,C0073,91.3,High,68,0,100.0,42.53,68 days inactive; order frequency down 100%
+35,C0131,91.2,High,67,0,100.0,81.1,67 days inactive; order frequency down 100%
+36,C0028,91.2,High,67,0,100.0,67.71,67 days inactive; order frequency down 100%
+37,C0296,90.8,High,65,0,100.0,73.4,65 days inactive; order frequency down 100%
+38,C0020,90.5,High,63,0,100.0,106.67,63 days inactive; order frequency down 100%
+39,C0042,90.2,High,61,0,100.0,96.07,61 days inactive; order frequency down 100%
+40,C0114,90.2,High,61,0,100.0,29.54,61 days inactive; order frequency down 100%
+41,C0059,89.8,High,59,0,100.0,46.96,59 days inactive; order frequency down 100%
+42,C0101,89.7,High,58,0,100.0,51.54,58 days inactive; order frequency down 100%
+43,C0006,89.5,High,57,0,100.0,54.87,57 days inactive; order frequency down 100%
+44,C0150,89.3,High,56,0,100.0,34.46,56 days inactive; order frequency down 100%
+45,C0050,88.5,High,51,0,100.0,10.0,51 days inactive; order frequency down 100%
+46,C0170,88.5,High,51,0,100.0,10.0,51 days inactive; order frequency down 100%
+47,C0289,88.2,High,49,0,100.0,68.08,49 days inactive; order frequency down 100%
+48,C0071,88.2,High,49,1,71.4,10.43,49 days inactive; order frequency down 71%
+49,C0199,87.8,High,47,0,100.0,64.16,47 days inactive; order frequency down 100%
+50,C0152,87.8,High,47,0,100.0,58.69,47 days inactive; order frequency down 100%
+51,C0179,87.7,High,46,1,81.8,42.73,46 days inactive; order frequency down 82%
+52,C0057,87.5,High,45,0,100.0,88.37,45 days inactive; order frequency down 100%
+53,C0146,87.5,High,45,0,100.0,49.9,45 days inactive; order frequency down 100%
+54,C0039,87.2,High,43,1,50.0,44.89,43 days inactive; order frequency down 50%
+55,C0278,87.0,High,42,0,100.0,68.47,42 days inactive; order frequency down 100%
+56,C0009,87.0,High,42,0,100.0,50.28,42 days inactive; order frequency down 100%
+57,C0111,87.0,High,42,1,60.0,33.89,42 days inactive; order frequency down 60%
+58,C0196,87.0,High,42,1,75.0,33.55,42 days inactive; order frequency down 75%
+59,C0108,86.8,High,41,0,100.0,62.53,41 days inactive; order frequency down 100%
+60,C0044,86.8,High,41,1,71.4,43.25,41 days inactive; order frequency down 71%
+61,C0096,86.7,High,40,0,100.0,58.56,40 days inactive; order frequency down 100%
+62,C0295,86.7,High,40,0,100.0,39.68,40 days inactive; order frequency down 100%
+63,C0248,86.7,High,40,1,81.8,10.96,40 days inactive; order frequency down 82%
+64,C0230,86.5,High,39,0,100.0,72.46,39 days inactive; order frequency down 100%
+65,C0102,86.2,High,37,1,66.7,74.3,37 days inactive; order frequency down 67%
+66,C0074,86.2,High,37,1,71.4,57.26,37 days inactive; order frequency down 71%
+67,C0063,86.2,High,37,0,100.0,52.05,37 days inactive; order frequency down 100%
+68,C0279,86.2,High,37,1,80.0,32.24,37 days inactive; order frequency down 80%
+69,C0177,86.0,High,36,1,75.0,52.17,36 days inactive; order frequency down 75%
+70,C0182,86.0,High,36,0,100.0,42.0,36 days inactive; order frequency down 100%
+71,C0168,85.8,High,35,0,100.0,43.56,35 days inactive; order frequency down 100%
+72,C0293,85.7,High,34,0,100.0,55.04,34 days inactive; order frequency down 100%
+73,C0046,85.5,High,33,0,100.0,57.21,33 days inactive; order frequency down 100%
+74,C0229,85.3,High,32,1,60.0,65.57,32 days inactive; order frequency down 60%
+75,C0154,85.2,High,31,1,50.0,83.11,31 days inactive; order frequency down 50%
+76,C0018,85.2,High,31,1,77.8,73.17,31 days inactive; order frequency down 78%
+77,C0035,85.2,High,31,1,66.7,65.31,31 days inactive; order frequency down 67%
+78,C0258,85.0,High,30,0,100.0,113.97,30 days inactive; order frequency down 100%
+79,C0202,85.0,High,30,0,100.0,69.57,30 days inactive; order frequency down 100%
+80,C0298,85.0,High,30,0,100.0,68.71,30 days inactive; order frequency down 100%
+81,C0178,68.0,Medium,48,1,33.3,62.28,48 days inactive; 3 support tickets
+82,C0085,56.0,Medium,66,0,0.0,57.95,66 days inactive
+83,C0163,52.0,Medium,42,1,33.3,87.53,42 days inactive
+84,C0076,50.0,Medium,21,0,100.0,122.72,order frequency down 100%; 5 support tickets
+85,C0207,50.0,Medium,21,1,75.0,110.79,order frequency down 75%; 3 support tickets
+86,C0201,50.0,Medium,28,0,100.0,101.69,order frequency down 100%; 5 support tickets
+87,C0281,50.0,Medium,21,0,100.0,85.1,order frequency down 100%; 3 support tickets
+88,C0120,50.0,Medium,26,0,100.0,68.32,order frequency down 100%; 3 support tickets
+89,C0153,50.0,Medium,27,0,100.0,67.58,order frequency down 100%; 3 support tickets
+90,C0187,50.0,Medium,2,1,50.0,49.95,order frequency down 50%; 3 support tickets
+91,C0141,50.0,Medium,28,1,75.0,41.11,order frequency down 75%; 3 support tickets
+92,C0227,50.0,Medium,30,1,0.0,25.96,30 days inactive
+93,C0299,50.0,Medium,22,0,100.0,14.94,order frequency down 100%; 3 support tickets

@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fitness Tracker Insights Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--ink:#14231c;--mute:#5d6f66;--line:#dfe6e2;--g:#1b7f5c;--b:#4a5bd4;--o:#d9822b;--r:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1713;--card:#17221c;--ink:#e8f1ec;--mute:#93a69b;--line:#27362d;--g:#3fc592;--b:#8392ff;--o:#f0a45a;--r:#ff7b6b}}
+:root[data-theme="dark"]{--bg:#0f1713;--card:#17221c;--ink:#e8f1ec;--mute:#93a69b;--line:#27362d;--g:#3fc592;--b:#8392ff;--o:#f0a45a;--r:#ff7b6b}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,"Times New Roman",serif}
+main{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.7rem;margin:.2em 0 .1em}h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--mute);margin:0 0 18px;font-family:system-ui,sans-serif;font-size:.9rem}
+.insight{background:var(--card);border-left:5px solid var(--g);padding:14px 16px;border-radius:6px;margin-bottom:18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;min-width:0}
+.wide{grid-column:1/-1}canvas{max-width:100%}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font:.88rem system-ui,sans-serif}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.neg{color:var(--r);font-weight:600}
+</style></head><body><main>
+<h1>Fitness Tracker Insights</h1>
+<p class="sub" id="meta"></p>
+<div class="insight"><strong>Top insight:</strong> <span id="ins"></span></div>
+<div class="grid">
+<div class="card"><h2>Avg daily steps by week</h2><canvas id="c1"></canvas></div>
+<div class="card"><h2>Avg sleep (hours) by week</h2><canvas id="c2"></canvas></div>
+<div class="card"><h2>Avg daily calories by week</h2><canvas id="c3"></canvas></div>
+<div class="card"><h2>Avg steps by day of week</h2><canvas id="c4"></canvas></div>
+<div class="card"><h2>Most Active Users (top 10)</h2><div class="scroll"><table id="lb"></table></div></div>
+<div class="card"><h2>Flagged: activity dropped 3+ days in a row</h2><div class="scroll"><table id="fl"></table></div></div>
+</div></main>
+<script>
+const D={"weeks": [1, 2, 3, 4, 5, 6, 7, 8], "steps": [7903.3, 7999.1, 7960.0, 7936.2, 7994.9, 7941.5, 8080.7, 7677.2], "sleep": [7.2, 7.2, 7.2, 7.2, 7.2, 7.2, 7.2, 7.2], "calories": [2354.5, 2354.8, 2357.6, 2362.6, 2359.5, 2364.0, 2361.3, 2365.1], "leaderboard": [{"rank": 1, "user_id": "U045", "avg_daily_steps": 16396}, {"rank": 2, "user_id": "U111", "avg_daily_steps": 13788}, {"rank": 3, "user_id": "U102", "avg_daily_steps": 12867}, {"rank": 4, "user_id": "U093", "avg_daily_steps": 12320}, {"rank": 5, "user_id": "U036", "avg_daily_steps": 12303}, {"rank": 6, "user_id": "U112", "avg_daily_steps": 12160}, {"rank": 7, "user_id": "U053", "avg_daily_steps": 12088}, {"rank": 8, "user_id": "U022", "avg_daily_steps": 12072}, {"rank": 9, "user_id": "U080", "avg_daily_steps": 12030}, {"rank": 10, "user_id": "U019", "avg_daily_steps": 11622}], "flagged": [{"user_id": "U050", "days_dropping": 5, "steps_before_drop": 8379, "steps_latest": 1505, "pct_change": -82.0}, {"user_id": "U010", "days_dropping": 5, "steps_before_drop": 6544, "steps_latest": 1200, "pct_change": -81.7}, {"user_id": "U073", "days_dropping": 7, "steps_before_drop": 12153, "steps_latest": 2769, "pct_change": -77.2}, {"user_id": "U049", "days_dropping": 3, "steps_before_drop": 5425, "steps_latest": 1506, "pct_change": -72.2}, {"user_id": "U063", "days_dropping": 5, "steps_before_drop": 10644, "steps_latest": 3084, "pct_change": -71.0}, {"user_id": "U118", "days_dropping": 3, "steps_before_drop": 4844, "steps_latest": 1543, "pct_change": -68.1}, {"user_id": "U086", "days_dropping": 4, "steps_before_drop": 7212, "steps_latest": 2347, "pct_change": -67.5}, {"user_id": "U090", "days_dropping": 4, "steps_before_drop": 7945, "steps_latest": 3488, "pct_change": -56.1}], "dow": {"Monday": 7727, "Tuesday": 7710, "Wednesday": 7790, "Thursday": 7644, "Friday": 7755, "Saturday": 8498, "Sunday": 8433}, "n_users": 120, "n_days": 56, "insight": "Activity peaks on Saturdays (~8,498 steps) and is lowest on Thursdays (~7,644). 8 of 120 users have dropped activity 3+ days in a row."};
+document.getElementById('meta').textContent=D.n_users+' users, '+D.n_days+' days of sample data';
+document.getElementById('ins').textContent=D.insight;
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function line(id,data,color){new Chart(document.getElementById(id),{type:'line',data:{labels:D.weeks.map(w=>'W'+w),datasets:[{data,borderColor:color,backgroundColor:color,tension:.25}]},options:{plugins:{legend:{display:false}},scales:{y:{ticks:{color:css('--mute')}},x:{ticks:{color:css('--mute')}}}}})}
+line('c1',D.steps,css('--g'));line('c2',D.sleep,css('--b'));line('c3',D.calories,css('--o'));
+new Chart(document.getElementById('c4'),{type:'bar',data:{labels:Object.keys(D.dow).map(k=>k.slice(0,3)),datasets:[{data:Object.values(D.dow),backgroundColor:css('--g')}]},options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:false,ticks:{color:css('--mute')}},x:{ticks:{color:css('--mute')}}}}});
+document.getElementById('lb').innerHTML='<tr><th>#</th><th>User</th><th>Avg steps</th></tr>'+D.leaderboard.map(r=>`<tr><td>${r.rank}</td><td>${r.user_id}</td><td>${r.avg_daily_steps.toLocaleString()}</td></tr>`).join('');
+document.getElementById('fl').innerHTML='<tr><th>User</th><th>Days down</th><th>Change</th></tr>'+D.flagged.map(r=>`<tr><td>${r.user_id}</td><td>${r.days_dropping}</td><td class="neg">${r.pct_change}%</td></tr>`).join('');
+</script></body></html>
